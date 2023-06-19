@@ -53,7 +53,7 @@ class LiburingConan(ConanFile):
         del self.settings.compiler.cppstd
 
     def _configure_args(self):
-        args = []
+        args = ["--prefix=/"]
         if self.options.get_safe("with_libc") == False:
             args.append("--nolibc")
         return args
